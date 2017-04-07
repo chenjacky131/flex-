@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div1{width: 50px;height: 50px;background: red;}
+			.div2{width: 60px;height: 60px;background: green;}
+			.div3{width: 70px;height: 70px;background: blue;}
+			.div4{width: 80px;height: 80px;background: yellow;}
+			/* flex基础知识点			 
+			 * display:flex;柔性布局，容器底下的元素将进行柔性布局 
+			 * flex-direction:row;柔性布局主轴的方向，默认row（值有：row,column,row-reverse,column-reverse）
+			 * justify-content:flex-start;控制元素在主轴的对其方式（值有：flex-start,flex-end,center,space-between,space-around）
+			 * align-items:flex-start;控制元素在交叉轴的对其方式(值有：flex-start,flex-end,center,stretch,baseline)
+			 * align-self:设置单个元素的 交叉轴对其方式
+			 * 
+			 * flex进阶知识点
+			 * flex-basis:通过主轴来影响元素尺寸，主轴为row时，其效果等同于width。主轴为column时，其效果等同于height.
+			 * flex-grow:值为0时，不能在容器内增长其宽度，为其它值时，宽度是个相对值。比如一个是1，一个是2，则2的宽度是1的两倍，其它默认为1。其宽度是相对主轴变化的。
+			 * flex-shrink的作用和flex-grow恰恰相反，来确定一个元素的缩小比例。默认为1.以为这他们会随着父元素的缩小而缩小。值为0时，禁止缩小。值为缩小的相对速度。
+			 * flex:是flex-grow,flex-shrink,flex-basis的缩写。
+			 * align-content:在弹性容器内的各项没有占用交叉轴上所有可用的空间时对齐容器内的各项（垂直）。值：stretch|center|flex-start|flex-end|space-between|space-around
+			 * flex-wrap:控制flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向。值：nowrap | wrap | wrap-reverse
+			 * flex-flow:<' flex-direction '> || <' flex-wrap '> 的缩写
+			 * */
+			body{height: 500px; display: flex;flex-direction:row;justify-content:center;align-items:center;transition: all 1s;}
+			body>div{flex-basis:200px;flex-grow:1;}
+		</style>
+	</head>
+	<body>
+		<div class="div1"><p>div1</p></div>
+		<div class="div2"><p>div2</p></div>
+		<div class="div3"><p>div3</p></div>
+		<div class="div4"><p>div4  stretch</p></div>
+	</body>
+</html>
